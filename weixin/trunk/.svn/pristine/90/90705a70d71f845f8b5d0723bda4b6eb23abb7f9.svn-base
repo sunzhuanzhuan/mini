@@ -1,0 +1,66 @@
+<!--pages/wechatrank/wechatrank.wxml-->
+<view class="container">
+    <view class="ranklist-updatetime">
+        榜单更新时间<text class="flex-inline ml20">{{rank_update_date}}</text>
+    </view>
+    <view class="flex justify-around">
+        <view class="flex items-center live-platform-item {{item.css}}" wx:for="{{platform_cates}}" bindtap="changePlatform" data-name="{{item.name}}">
+            <image src="{{item.address}}"></image>
+            <text>{{item.value}}</text>
+        </view>
+    </view>
+    <view class="flex justify-around rank-dropdown-nav pl30">
+        <view class="flex relative">
+            <view id="rank-cate-btn" class="rank-title" bindtap="rankBtnClick">{{rank_cate_title}}</view> <view class="arrow-down mt35 ml5"></view>
+            <view wx:if="{{rank_cate_status}}" class="flex rank-dropdown-content absolute z1">
+
+            <view class="flex justify-center arrow-up mt-30 top-0 absolute self-center"><view class="arrow-up-border"></view></view>
+            <radio-group id="rank-cate-radio" class="flex flex-column rank-dropdown-menu wechat-cate-title" bindchange="radioChange">
+            <label class="radio {{item.css}}" wx:for="{{rank_cates}}">
+                {{item.value}}
+                <radio class="hide" value="{{item.name}}" checked="{{item.checked}}"/>
+            </label>
+            </radio-group>
+        </view>
+    </view>
+    <view class="flex relative">
+        <view id="rank-child-cate-btn" class="rank-title" bindtap="rankBtnClick">{{rank_child_cate_title}}</view> <view class="arrow-down mt35 ml5"></view>
+        <view wx:if="{{rank_child_cate_status}}" class="flex rank-dropdown-content rank-dropdown-date absolute z1">
+            <view class="flex justify-center arrow-up mt-30 absolute self-center"><view class="arrow-up-border"></view></view>
+            <radio-group  wx:if="{{rank_child_cate_status}}" id="rank-child-cate-radio" class="flex flex-wrap flex-column rank-dropdown-menu wechat-child-cate-title" bindchange="radioChange">
+            <label class="radio {{item.css}}" wx:for="{{rank_child_cates}}">
+                <radio class="hide" value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+            </label>
+            </radio-group>
+        </view>
+    </view>
+</view>
+<!-- item -->
+<scroll-view  hidden="{{error_tip}}" class="flex flex-auto flex-column overflow-auto live-rank-list-box" scroll-y="true">
+    <view class="flex items-start live-rank-list-item" wx:for="{{rank_list}}">
+        <view class="center account-rank-num  {{item.special_color}}">
+			<view>{{index+1}}</view>
+			<image class="rank_trend" src="/assets/images/{{item.icon_src_rank_trend}}.png"></image>
+		</view>
+        <image class="flex live-face-url ml20" src="{{item.live_account_avatar_url}}"></image>
+        <view class="flex flex-column ml20">
+            <view class="weibo_name">{{item.live_account_nickname}}</view>
+            <view class="live_weibo_id"><image src="{{item.platform_icon}}"></image><text class="ml10">{{item.live_account_id}}</text>
+            </view>
+            <view class="flex mt5 live-follower-donate">
+                <text class="live-followers-text">粉丝数 {{item.live_account_followers_count}}</text>
+                <text class="ml10 live-donate-text">主播收入 {{item.live_account_contribution_sum}}</text>
+            </view>
+        </view>
+        <view class="flex flex-column flex-auto items-end">
+            <view class="item-rank-text">{{item.data_tip_title}}</view>
+            <view class="item-rank-data bold">{{item.data_tip_score}}</view>
+        </view>
+    </view>
+
+    </scroll-view>
+    <!--错误tips-->
+    <view wx:if="{{error_tip}}" class="flex-auto flex justify-center items-center error-tip-box">
+        <icon type="warn" size="25" color="red"/><text class="ml10 fs25">{{error_tip}}</text>
+    </view>
+</view>

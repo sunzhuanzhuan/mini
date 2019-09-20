@@ -1,0 +1,60 @@
+//index.js
+//获取应用实例
+var util = require('../../utils/util.js');
+var app = getApp();
+Page({
+    data: {
+        wechat_nav_bg: [
+            {
+                address: util.base_qiniu_url+'/nav_hasoriginal_bg.png',
+                id: 'hasoriginal_snbt_rank',
+                text: '原创能力榜'
+            },
+            {address: util.base_qiniu_url+'/nav_commercial_bg.png', id: 'commercial_rank', text: '营销价值榜'},
+            {address: util.base_qiniu_url+'/nav_area_bg.png', id: 'area_commercial_rank', text: '最热地域榜'},
+            {address: util.base_qiniu_url+'/nav_favourite_bg.png', id: 'favourite_rank', text: '广告主最爱榜'}
+        ],
+        live_nav_bg: [
+            {address: util.base_qiniu_url+'/logo_quanpingtai.png', id: 'all_platform', text: '全平台'},
+            {address: util.base_qiniu_url+'/logo_huajiao.png', id: 'huajiao', text: '花椒'},
+            {address: util.base_qiniu_url+'/logo_yinke.png', id: 'inke', text: '映客'},
+            {address: util.base_qiniu_url+'/logo_yizhibo.png', id: 'yizhibo', text: '一直播'},
+            {address: util.base_qiniu_url+'/logo_meipai.png', id: 'meipai', text: '美拍'}
+        ]
+    },
+    toRankList: function (event) {
+        var navId = event.currentTarget.dataset.navId;
+        var rankType = event.currentTarget.dataset.rankType;
+        var url = null;
+        if (rankType == 'wechat') {
+            url = '../wechatrank/wechatrank?rank=' + navId;
+        } else {
+            url = '../liverank/liverank?platform=' + navId;
+        }
+
+        wx.navigateTo({
+            url: url,
+            complete: function () {
+                console.log(url)
+            }
+        })
+
+    },
+    onLoad: function () {
+        var that = this;
+        //调用应用实例的方法获取全局数据
+        app.getUserInfo(function (userInfo) {
+            //更新数据
+            that.setData({
+                userInfo: userInfo
+            })
+        })
+    },
+    onShareAppMessage: function () {
+        return {
+        title: '自媒体TOP榜',
+        desc: '微信公众号、映客、花椒、一直播....等各类自媒体榜单、画像、报价查询！',
+        path: '/pages/index/index'
+        }
+    }
+})

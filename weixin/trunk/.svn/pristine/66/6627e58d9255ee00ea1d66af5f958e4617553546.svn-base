@@ -1,0 +1,83 @@
+/* pages/liverank/liverank.wxss */
+/*直播样式*/
+.live-account-gender{
+   width: 22rpx;
+    height:22rpx;
+}
+.live-rank-list-box{
+    width: 100%;
+    height: 100%;
+    background:#FAFAFA ;
+}
+.live-platform-item{
+    font-size: 32rpx;
+    overflow: hidden;
+    padding: 20rpx 0 10rpx;
+    border-bottom:6rpx solid transparent;
+}
+.live-platform-item image{
+    width: 40rpx;
+    height: 40rpx;
+}
+.live-platform-item text{
+    line-height: 90rpx;
+    font-size: 32rpx;
+}
+.live-rank-list-item{
+    padding: 35rpx 0;
+    margin: 0 30rpx;
+    border-bottom: 1rpx solid #DFDFDF;
+}
+.live_weibo_id{
+  font-size: 24rpx;
+  color: #999999;
+}
+.live_weibo_id image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.live-face-url{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 10rpx;
+    background-size: 100%;
+}
+.live-follower-donate{
+    height: 36rpx;
+    color: #999999;
+    font-size: 24rpx;
+    line-height: 36rpx;
+}
+.item-rank-text{
+  font-size: 28rpx;
+  line-height: 42rpx;
+}
+.item-rank-data{
+  font-size: 30rpx;
+  line-height: 39rpx;
+  color: #F5655B;
+}
+.border-red-line{
+    border-bottom: 6rpx solid #FF4545;
+}
+.ranklist-updatetime{
+    font-size: 24rpx;
+    font-family: "PingFang SC";
+}
+.model{
+    position: fixed;
+    bottom:80rpx ;
+    right: 0;
+    width:120rpx;
+    height:110rpx;
+    background:#FF4545 ;
+    border-radius: 100rpx 0 0 100rpx;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 6rpx 6rpx #ffd6d6 ;
+}
+.imgMan{
+    width: 70rpx;
+    height:66rpx;
+    margin-top: 25rpx;
+}

@@ -1,0 +1,54 @@
+.model{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+}
+.boxModel{
+  position: absolute;
+  width: 580rpx;
+  height: 550rpx;
+  background: #ffffff;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-70%);
+  border-radius: 8rpx;
+  text-align: center;
+}
+.btnSubmit{
+  display: inline-block;
+  width: 440rpx;
+  height: 88rpx;
+  border-radius: 44rpx;
+  background: #EA3333;
+  color:#ffffff ;
+  font-size: 32rpx;
+  font-family: "PingFang SC";
+  box-shadow: 0 14rpx 14rpx #ffe1e1;
+  border: none;
+  text-align: center;
+}
+.icon{
+  margin-top:68rpx ;
+  width: 100%;
+  height: 80rpx;
+  text-align: center;
+}
+.success{
+  margin-top:42rpx ;
+  font-size: 44rpx;
+  color: #333333;
+}
+.link{
+  margin-top: 20rpx;
+  margin-bottom: 74rpx;
+  font-size: 28rpx;
+  color:#333333;
+}
+.bottomLine{
+  text-align: center;
+}
+.img{
+  width: 80rpx;
+  height: 80rpx;
+}

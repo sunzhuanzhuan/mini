@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view>
+  <view class="titleBox">
+    <view>留下信息</view>
+    <view>方便我们的顾问同学即时的提供服务信息哦</view>
+    <image src="{{edit}}" class="edit"></image>
+  </view>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="boxItem">
+        <view class="label">姓<span style="visibility: hidden">所在</span>名</view>
+        <input class="inputContent" bindinput="handleRequire"  bindfocus="handleRequire" data-require-type="name" name="name" />
+        <view class="requireInfo" hidden="{{isName}}">请填写姓名</view>
+      </view>
+      <view class="boxItem">
+        <view class="label">所在公司</view>
+        <input class="inputContent" bindinput="handleRequire" bindfocus="handleRequire" data-require-type="company" name="company_name" />
+        <view class="requireInfo" hidden="{{isCompany}}">请填写所在公司</view>
+      </view>
+      <view class="boxItem">
+        <view class="labelNone">所属行业</view>
+        <input class="inputContent" bindinput="handleRequire" name="industry" />
+      </view>
+      <view class="boxItem">
+        <view class="label">联系电话</view>
+        <input class="inputContent" bindinput="handleRequire"  bindfocus="handleRequire"  name="contact" data-require-type="phone"/>
+        <view class="requireInfo" hidden="{{isPhone}}">请填写联系电话</view>
+      </view>
+      <view class="boxItem">
+        <view class="label">联系邮箱</view>
+        <input class="inputContent" bindinput="handleRequire"   bindfocus="handleRequire" name="email" data-require-type="email"/>
+        <view class="requireInfo" hidden="{{isEmail}}">请填写联系邮箱</view>
+      </view>
+      <view class="lineHeng"></view>
+      <button class="{{isDisable ==true ? '':'addShow'}} btnSubmit " formType="submit" disabled="{{isDisable}}"> 提交信息 </button>
+      <!--="true"-->
+    </form>
+    <view class="bottom"><text style="padding-right: 20rpx">微播易</text>|<text style="padding-left: 20rpx">用科技让新媒体传播更简易</text></view>
+
+</view>

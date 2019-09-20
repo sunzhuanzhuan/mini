@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="containerIndex">
+  <view class="index-banner">
+      <image class="topCircle" src="http://okufalgir.bkt.clouddn.com/index_v1_ring3.png"></image>
+
+      <image class="topCircleGreen" src="http://okufalgir.bkt.clouddn.com/index_v1_ring1.png"></image>
+
+      <image class="topCircleDash" src="http://okufalgir.bkt.clouddn.com/index_v1_ring2.png"></image>
+
+      <image class="topCircleArrow" src="http://okufalgir.bkt.clouddn.com/index_v1_mask.png"></image>
+    <!--覆盖阴影部分-->
+      <view class="shodow"></view>
+      <!--蓝边-->
+      <image class="blueArrow" src="http://okufalgir.bkt.clouddn.com/index_v1_polyline.png"></image>
+      <!--最大圈-->
+      <image class="bigCircle" src="http://okufalgir.bkt.clouddn.com/index_v1_ring4.png"></image>
+
+  </view>
+  <view class="ranklist-nav-box">
+    <view class="flex flex-wrap justify-center navBox">
+      <view class="nav-item" wx:for="{{wechat_nav_bg}}" wx:key="id">
+        <view bindtap="toRankList"  data-select="{{index}}" class="imgBox {{index == num ? 'bag':''}}"
+              data-nav-id="{{item.id}}" data-rank-type="{{item.rankType}}">
+          <image class="img" src="{{item.address}}"></image>
+        </view>
+        <view><text class="fs28 textBottom">{{item.text}}</text></view>
+      </view>
+    </view>
+  </view>
+    <image  class="footerBox" src="http://okufalgir.bkt.clouddn.com/index_v1_our_advantage.png"></image>
+
+</view>

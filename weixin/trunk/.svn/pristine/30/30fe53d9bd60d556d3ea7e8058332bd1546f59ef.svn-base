@@ -1,0 +1,48 @@
+.index-banner{
+  height: 245rpx;
+  background-image: url(http://okufalgir.bkt.clouddn.com/index_banner.png);
+  background-size: auto 245rpx;
+}
+.ranklist-nav-box{
+  height: 364rpx;
+  justify-content: center;
+  background-color: white;
+}
+.copyright-box{
+  height: 100rpx;
+  color: #D0D0D0;
+  font-size: 20rpx;
+}
+.wechat-nav-title{
+  height: 120rpx;
+}
+.wechat-nav-title .bg{
+  width: 492rpx;
+  height: 58rpx;
+  background-image: url(http://okufalgir.bkt.clouddn.com/wechat_ranklist_title_bg.png);
+  background-size: cover;
+}
+.live-nav-title{
+  height: 120rpx;
+}
+.live-nav-title .bg{
+  width: 492rpx;
+  height: 58rpx;
+  background-image: url(http://okufalgir.bkt.clouddn.com/live_ranklist_title_bg.png);
+  background-size: cover;
+}
+.nav-items{
+  height: 244rpx;
+}
+.nav-item{
+  width: 150rpx;
+  height: 160rpx;
+}
+.nav-item image{
+  width: 130rpx;
+  height: 130rpx;
+}
+.nav-item text{
+  display: inline-block;
+  width: 150rpx;
+}

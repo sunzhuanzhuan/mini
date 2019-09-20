@@ -1,0 +1,97 @@
+.label:before{
+  display: inline-block;
+  content: "*";
+  font-family: SimSun;
+  line-height: 1;
+  font-size: 28rpx;
+  color:#FF4545;
+  margin-left:40rpx ;
+  margin-right: 16rpx;
+}
+.labelNone{
+  display: inline-block;
+  color: #333333;
+  font-size: 28rpx;
+  margin-left:70rpx ;
+}
+.label{
+  display: inline-block;
+  height:32rpx;
+  color: #333333;
+  font-size: 28rpx;
+}
+.inputContent{
+  display: inline-block;
+  background: #FAFAFA;
+  width: 500rpx;
+  height:62rpx ;
+  float: right;
+  margin-right: 40rpx;
+  margin-left: 22rpx;
+  font-size:28rpx;
+  font-family: "PingFang SC";
+  text-align: center;
+}
+.boxItem{
+  margin-bottom: 60rpx;
+}
+.titleBox{
+  margin-top:74rpx;
+  margin-left: 40rpx;
+  font-size: 32rpx;
+  color:#333333;
+  font-family: "PingFang SC";
+  margin-bottom: 100rpx;
+  line-height: 52rpx;
+}
+.edit{
+  position: absolute;
+  top:0;
+  right: 0;
+  width:235rpx;
+  height:235rpx
+}
+.lineHeng{
+  margin-top: 82rpx;
+  height: 40rpx;
+  background:linear-gradient(#f9f9f9,#fcfcfc);
+  margin-bottom: 70rpx;
+}
+.btnSubmit{
+  width: 600rpx;
+  height: 88rpx;
+  line-height:2.8;
+  background: #EA3333;
+  border-radius: 44rpx;
+  color:#ffffff ;
+  font-size: 32rpx;
+  font-family: "PingFang SC";
+  box-shadow: 0 14rpx 14rpx #f6f6f6;
+  border-color: #ffffff;
+  text-align: center;
+  position: static;
+}
+.addShow{
+  box-shadow: 0 14rpx 14rpx #ffe1e1;
+}
+button[disabled]:not([type]) {
+  color: #ffffff;
+  background-color: #DFDFDF;
+  font-weight: lighter;
+}
+.bottom{
+  margin-top:32rpx ;
+  color:#333333 ;
+  font-size: 28rpx;
+  text-align: center;
+}
+.requireInfo{
+  color:#FF4545 ;
+  font-size: 24rpx;
+  width: 500rpx;
+  float: right;
+  margin-right: 40rpx;
+  margin-left: 22rpx;
+  margin-top: 4rpx;
+  text-align: center;
+}

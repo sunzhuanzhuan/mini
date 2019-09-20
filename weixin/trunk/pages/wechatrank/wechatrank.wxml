@@ -1,0 +1,69 @@
+<!-- pages/wechatrank/wechatrank.wxml -->
+<view class="container">
+	<view class="ranklist-updatetime">
+		<text class="ml20">榜单更新时间 {{rank_update_date}}</text>
+	</view>
+	<view class="flex rank-dropdown-nav ml20" style="margin-bottom: 12rpx">
+		<view class="flex relative"  style="margin-right: 48rpx;margin-left: 32rpx">
+			<view id="rank-cate-btn" class="rank-title" bindtap="rankBtnClick">{{rank_cate_title}}</view>
+			<view class="{{arrowSnbt == 1?'arrow-down':'arrow-down-right'}} mt35 ml5"></view>
+			<view wx:if="{{rank_cate_status}}" class="flex rank-dropdown-content absolute z1">
+				<view class="flex justify-center arrow-up mt-30 top-0 absolute self-center">
+					<view class="arrow-up-border"></view>
+				</view>
+				<radio-group id="rank-cate-radio" class="flex flex-column rank-dropdown-menu wechat-cate-title"
+				             bindchange="radioChange">
+					<label class="radio {{item.css}}" wx:for="{{rank_cates}}">
+						{{item.value}}
+					<radio class="hide" value="{{item.name}}" checked="{{item.checked}}"/>
+					</label>
+				</radio-group>
+			</view>
+		</view>
+		<view class="flex">
+			<view id="rank-child-cate-btn" class="rank-title" bindtap="rankBtnClick">{{rank_child_cate_title}}</view>
+			<view class="{{arrow == 1?'arrow-down':'arrow-down-right'}} mt35 ml5"></view>
+			<view wx:if="{{rank_child_cate_status}}" class="rank-dropdown-content rank-dropdown-category col-12 absolute z1">
+				<view class="flex justify-center arrow-up mt-30 absolute self-center">
+					<view class="arrow-up-border"></view>
+				</view>
+				<radio-group wx:if="{{rank_child_cate_status}}" id="rank-child-cate-radio"
+				             class="flex flex-wrap rank-dropdown-menu wechat-child-cate-title" bindchange="radioChange">
+					<label class="radio  {{item.css}}" wx:for="{{rank_child_cates}}">
+							<radio class="hide" value="{{item.name}}" checked="{{item.checked}}"  />
+							{{item.value}}
+					</label>
+				</radio-group>
+			</view>
+		</view>
+	</view>
+	<view class="cutOffRule"></view>
+	<!-- item -->
+	<scroll-view hidden="{{error_tip}}" class="flex flex-auto flex-column overflow-auto wechat-rank-list-box" scroll-y="true">
+		<view class="flex items-center wechat-rank-list-item" wx:for="{{rank_list}}">
+			<view class="center account-rank-num {{item.special_color}}">
+				<view>{{index+1}}</view>
+				<image class="rank_trend" src="/assets/images/{{item.icon_src_rank_trend}}.png"></image>
+			</view>
+			<view class="flex face_url ml30"
+					style='background:url("http://open.weixin.qq.com/qr/code?username={{item.wechat_id}}") center center no-repeat scroll transparent;background-size: 450%;'>
+			
+			</view>
+			<view class="ml30">
+				<view class="weibo_name">{{item.wechat_nickname}}</view>
+				<view class="weibo_id">{{item.wechat_id}}</view>
+			</view>
+			<view class="flex flex-column flex-auto items-end">
+				<view class="item-rank-text">{{item.data_tip_title}}</view>
+				<view class="item-rank-data bold">{{item.data_tip_score}}</view>
+			</view>
+		</view>
+	</scroll-view>
+	<!--打开悬浮窗的按钮-->
+	<button  disabled="{{isForbidden}}" class="model" bindtap="handleJumpinfo" style="{{translate}}"><image class="imgMan" src="{{model}}"></image></button>
+	<!-- 错误tips -->
+	<view  wx:if="{{error_tip}}" class="flex-auto flex justify-center items-center error-tip-box">
+		<icon type="warn" size="25" color="red"  />
+		<text class="ml10 fs25">{{error_tip}}</text>
+	</view>
+</view>

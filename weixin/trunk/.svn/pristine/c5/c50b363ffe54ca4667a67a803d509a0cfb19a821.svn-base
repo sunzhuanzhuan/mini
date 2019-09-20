@@ -1,0 +1,255 @@
+.containerIndex{
+  overflow-x: hidden;
+  height: 100%;
+}
+.index-banner{
+  background-image:  url(http://okufalgir.bkt.clouddn.com/index_v1_main.png) ;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 660rpx;
+  width: 100%;
+  margin: 0 28rpx;
+  margin-top: 26rpx;
+  position: relative;
+}
+.topCircle{
+  width: 400rpx;
+  height: 400rpx;
+  margin-top: -180rpx;
+  transform: rotate(-120deg);
+  margin-left: 250rpx;
+  animation: changeShownCircle 10s infinite linear;
+}
+.topCircleGreen{
+  width: 400rpx;
+  height: 400rpx;
+  margin-top: -180rpx;
+  transform: rotate(330deg);
+  float: right;
+  margin-right: -110rpx;
+  margin-top: 30rpx;
+  animation: roateCircleDash 10s infinite linear;
+
+}
+.shodow{
+  width:260rpx;
+  height:240rpx;
+  background:#ffffff;
+  float: right;
+  position: absolute;
+  z-index: 2;
+  bottom: -40rpx;
+  right:-20rpx;
+  transform: rotate(40deg) ;
+}
+.topCircleDash{
+  width: 250rpx;
+  height: 250rpx;
+  transform: rotate(330deg);
+  right: 0;
+  margin-right: -40rpx;
+  margin-top: 170rpx;
+  position: absolute;
+  top:180rpx;
+  z-index: 3;
+  animation: roateCircleDash 10s infinite linear;
+
+}
+.topCircleArrow{
+  width:120rpx;
+  height:80rpx;
+  float: right;
+  margin-top: 250rpx;
+  margin-right: -110rpx;
+}
+.blueArrow{
+  width: 100rpx;
+  height: 280rpx;
+  position: absolute;
+  left: -28rpx;
+  top:400rpx;
+  animation: changeShown 6s infinite linear;
+}
+.bigCircle{
+  width: 600rpx;
+  height: 600rpx;
+  position: absolute;
+  left: -450rpx;
+  top:200rpx;
+  animation: roateCircleDash 10s infinite linear;
+  background-size: auto;
+  z-index: -10;
+}
+/*旋转*/
+@keyframes roateCircleDash {
+  0% {
+    transform: rotateZ(0deg);
+    /*opacity: 0.1;*/
+  }
+  10% {
+      transform: rotateZ(90deg);
+      /*opacity: 0.2;*/
+    }
+  20%{
+    transform: rotateZ(180deg);
+    /*opacity: 0.25;*/
+  }
+  30%{
+    transform: rotateZ(270deg);
+    /*opacity: 0.3;*/
+  }
+  40% {
+    transform: rotateZ(360deg);
+    /*opacity: 0.35;*/
+  }
+  60% {
+    transform: rotateZ(270deg);
+    /*opacity: 0.4;*/
+  }
+  70% {
+    transform: rotateZ(180deg);
+    /*opacity: 0.45;*/
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+/*渐隐渐现三角*/
+@keyframes changeShown {
+  100%{
+    opacity: 0.8;
+    filter: blur(3rpx)
+   }
+  75%{
+    opacity: 0.3;
+  }
+  50%{
+    opacity: 0.2;
+    filter: blur(5rpx)
+  }
+  25% {
+    opacity: 0.4;
+  }
+  0% {
+    opacity: 0.8;
+    filter: blur(3rpx)
+  }
+}
+/*渐隐渐现圆*/
+@keyframes changeShownCircle {
+  100%{
+    opacity: 0.6;
+    filter: blur(5rpx);
+  }
+  75%{
+    opacity: 0.7;
+  }
+  25% {
+    opacity: 0.8;
+  }
+  0% {
+    opacity: 0.9;
+    filter: blur(3rpx);
+  }
+}
+/*缩放效果*/
+
+@keyframes scale {
+  0%{
+    transform: scale(0.9);  /*开始为原始大小*/
+  }
+  75%{
+    transform: scale(1);
+  }
+}
+.ranklist-nav-box{
+  position: absolute;
+  top:564rpx;
+  z-index: 4;
+}
+
+.footerBox{
+  width:100%;
+  height:486rpx;
+  position: absolute;
+  bottom:0;
+  top:1200rpx;
+  background-size: contain;
+}
+.copyright-box{
+  height: 100rpx;
+  color: #D0D0D0;
+  font-size: 20rpx;
+}
+.wechat-nav-title{
+  height: 120rpx;
+}
+.wechat-nav-title .bg{
+  width: 492rpx;
+  height: 58rpx;
+  background-image: url(http://okufalgir.bkt.clouddn.com/wechat_ranklist_title_bg.png);
+  background-size: cover;
+}
+.live-nav-title{
+  height: 120rpx;
+}
+.live-nav-title .bg{
+  width: 492rpx;
+  height: 58rpx;
+  background-image: url(http://okufalgir.bkt.clouddn.com/live_ranklist_title_bg.png);
+  background-size: cover;
+}
+.navBox{
+  /*padding: 0 38rpx;*/
+  margin-bottom: 110rpx;
+}
+.nav-items{
+  height: 244rpx;
+}
+.nav-item{
+  width: 200rpx;
+  display: inline-block;
+  text-align: center;
+}
+.nav-item:nth-child(2){
+  margin: 0 36rpx;
+}
+.nav-item:nth-child(5){
+  margin: 0 36rpx;
+}
+/*装有图片的盒子*/
+.imgBox{
+  display: inline-block;
+  width:120rpx;
+  height:120rpx;
+  border-radius: 120rpx;
+  position:relative;
+  text-align: center;
+  box-shadow: 0 2rpx 6rpx 6rpx #f4f4f4;
+  background: #ffffff;
+}
+.bag{
+  background:#f5f5f5 ;
+  animation: scale 0.1s 1;
+}
+.img{
+  position: absolute;
+  width: 80rpx;
+  height: 80rpx;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+.textBottom{
+  display: inline-block;
+  margin-top: 20rpx;
+  height:40rpx;
+  margin-bottom: 66rpx;
+  /*width: 120rpx;*/
+  height:40rpx;
+  text-align: center;
+}
+.linkUs{
+  width: 100%;
+  height: 486rpx;
+}

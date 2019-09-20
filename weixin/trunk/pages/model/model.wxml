@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="model">
+  <view class="boxModel">
+    <view class="icon"><image class='img' src="../../assets/images/tick.png"></image></view>
+    <view class="success">提 交 成 功</view>
+    <view class="link">我们将在三个工作日与你联系^_^</view>
+    <view class="bottomLine"><button class="btnSubmit" bindtap="handleBack">我知道啦</button></view>
+  </view>
+</view>

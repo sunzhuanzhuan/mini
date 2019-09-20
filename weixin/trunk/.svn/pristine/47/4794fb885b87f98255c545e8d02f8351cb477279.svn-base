@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="container justify-between">
+  <view class="col-12 index-banner">
+
+  </view>
+  <view class="col-12 ranklist-nav-box flex flex-column">
+    <view class="wechat-nav-title flex justify-around items-center">
+      <view class="bg"></view>
+    </view>
+    <view class="nav-items flex justify-around items-start">
+      <view class="nav-item" wx:for="{{wechat_nav_bg}}" wx:key="id" bindtap="toRankList" data-nav-id="{{item.id}}" data-rank-type="wechat">
+        <image src="{{item.address}}" class="ml10"></image>
+        <text class="fs25 center">{{item.text}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="col-12 ranklist-nav-box flex flex-column">
+    <view class="live-nav-title flex justify-around items-center">
+      <view class="bg"></view>
+    </view>
+    <view class="nav-items flex justify-around items-start">
+      <view class="nav-item" wx:for="{{live_nav_bg}}" wx:key="id" bindtap="toRankList" data-nav-id="{{item.id}}" data-rank-type="live">
+        <image src="{{item.address}}" class="ml10"></image>
+        <text class="fs25 center">{{item.text}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="col-12 copyright-box flex flex-column justify-end items-center pb10">
+      <text class="colroD0  pb10">微播易科技股份有限公司</text>
+      <text class="colroD0">Copyright 2017</text>
+  </view>
+</view>

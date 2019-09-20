@@ -1,0 +1,40 @@
+/* pages/wechatrank/wechatrank.wxss */
+.wechat-rank-list-box{
+    width: 100%;
+    height: 100%;
+    background:#FAFAFA
+}
+.wechat-rank-list-item{
+    height: 130rpx;
+    margin: 0 30rpx;
+    border-bottom: 1rpx solid #DFDFDF;
+}
+.wechat-rank-list-item .account-rank-num{
+  line-height: 30rpx;
+}
+.model{
+    position: fixed;
+    bottom:80rpx ;
+    right: 0;
+    width:120rpx;
+    height:110rpx;
+    background:#FF4545 ;
+    border-radius: 100rpx 0 0 100rpx;
+    box-shadow: 0 6rpx 6rpx #ffd6d6 ;
+    display: inline-block;
+    text-align: center;
+}
+.imgMan{
+    width: 70rpx;
+    height:66rpx;
+    margin-top: 25rpx;
+}
+.ranklist-updatetime{
+    font-size: 24rpx;
+    font-family: "PingFang SC";
+    color: #ffffff;
+}
+.cutOffRule{
+    height: 32rpx;
+    background: linear-gradient(#F0F0F0,#FaFaFa);
+}

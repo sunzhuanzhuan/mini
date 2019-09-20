@@ -1,0 +1,13 @@
+/* pages/wechatrank/wechatrank.wxss */
+.wechat-rank-list-box{
+    width: 100%;
+    height: 100%;
+}
+.wechat-rank-list-item{
+    height: 130rpx;
+    margin: 0 30rpx;
+    border-bottom: 1rpx solid #DFDFDF;
+}
+.wechat-rank-list-item .account-rank-num{
+  line-height: 30rpx;
+}

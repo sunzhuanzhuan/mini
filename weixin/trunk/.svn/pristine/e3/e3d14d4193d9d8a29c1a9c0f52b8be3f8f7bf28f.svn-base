@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/wechatrank/wechatrank",
+    "pages/liverank/liverank"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "KOL大全",
+    "navigationBarTextStyle": "white"
+  }
+}
